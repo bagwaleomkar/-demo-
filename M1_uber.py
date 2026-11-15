@@ -115,3 +115,19 @@ print("\nRandom Forest Results")
 print("R2 Score:", r2_score(y_test, pred2))
 print("RMSE:", np.sqrt(mean_squared_error(y_test, pred2)))
 print("MAE:", mean_absolute_error(y_test, pred2))
+
+
+# R2 Score Comparison
+
+models = ['Linear Regression', 'Random Forest']
+
+scores = [
+    r2_score(y_test, pred1),
+    r2_score(y_test, pred2)
+]
+
+plt.bar(models, scores)
+plt.title("R2 Score Comparison")
+plt.ylabel("R2 Score")
+plt.xlabel("Models")
+plt.show()
